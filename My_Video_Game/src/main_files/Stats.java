@@ -86,6 +86,18 @@ public class Stats
 			return false;
 		}
 	}
+	public void Rest()
+	{
+		if(max_hp == current_hp)
+		{
+			System.out.println("You are feeling fine, so decided not to rest right now");
+		}
+		if(current_hp < max_hp)
+		{
+			System.out.println("You took a nice long rest and now your Current hp is now at max");
+			current_hp = max_hp;
+		}
+	}
 	public void Level_up()
 	{
 		level = level + 1;

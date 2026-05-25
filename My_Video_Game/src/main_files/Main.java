@@ -7,5 +7,6 @@ public class Main
 	{
 		Main_Script script = new Main_Script();
 		script.Run_Intro();
+		script.Run_Town();
 	}
 }
