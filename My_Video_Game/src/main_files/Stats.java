@@ -58,7 +58,7 @@ public class Stats
 		{
 			current_hp = 0;
 		}
-		System.out.print("Took " + damage + " damage");
+		System.out.println(name + " took " + damage + " damage");
 	}
 	public void Heal_Damage(int heal) //raises current_hp
 	{
@@ -67,12 +67,12 @@ public class Stats
 		{
 			current_hp = max_hp;
 		}
-		System.out.print("Received heal of " + heal + " now at " + current_hp + " hp");
+		System.out.println(name + " received heal of " + heal + " now at " + current_hp + " hp");
 	}
 	public void Increase_Experience(int gained_experience)
 	{
 		experience = experience + gained_experience;
-		System.out.print("Gained " + gained_experience + " experience points");
+		System.out.println("Gained " + gained_experience + " experience points");
 	}
 	public boolean Can_Level_up()
 	{

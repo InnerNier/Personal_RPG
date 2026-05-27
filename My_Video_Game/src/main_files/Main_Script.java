@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Main_Script 
 {
-	Stats player = new Stats("Player", 1, 10, 3, 3, 2, 2);
+	Stats player = new Stats("Player", 1, 10, 3, 3, 2, 3);
 	Inventory player_inventory = new Inventory();
 	Combat_Script battle = new Combat_Script();
 	Scanner keyboard = new Scanner(System.in);
@@ -102,7 +102,10 @@ public class Main_Script
 						System.out.println("Time to fight the bear!");
 					}
 					Timeout();
-					total_searches++;
+					if(total_searches != 30)
+					{
+						total_searches++;
+					}
 					break;
 				case 'a':
 					System.out.println("You decided to head back to Bell Town");
@@ -125,6 +128,10 @@ public class Main_Script
 					else if(total_searches < 30)
 					{
 						System.out.println("You feel like you're getting close to finding the treasure, just got to search a bit more");
+					}
+					else
+					{
+						System.out.println("You know where the treasure is, search and go get it");
 					}
 					Timeout();
 					break;
